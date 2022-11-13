@@ -6,7 +6,7 @@ namespace ServiceB
         {
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
-            app.MapGet("/", () => "Hello, This is a ServiceB from NamespaceB");
+            app.MapGet("/", () => "Hello, This is a ServiceB from NamespaceA");
             app.Run();
         }
     }

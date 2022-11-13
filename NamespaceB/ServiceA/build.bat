@@ -1,1 +1,1 @@
-docker build -f Dockerfile -t b_servicea ..
+docker build -f Dockerfile -t localhost:6000/b_servicea ..

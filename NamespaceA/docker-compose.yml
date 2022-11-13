@@ -1,8 +1,8 @@
 version: '3.0'
 services:
   servicea:
-    image: a_servicea
+    image: localhost:6000/a_servicea
     ports:
       - 7000:80
   serviceb:
-    image: a_serviceb
+    image: localhost:6000/a_serviceb
