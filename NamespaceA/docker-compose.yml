@@ -1,8 +1,8 @@
 version: '3.0'
 services:
   servicea:
-    image: b_servicea
+    image: a_servicea
     ports:
-      - 7001:80
+      - 7000:80
   serviceb:
-    image: b_serviceb
+    image: a_serviceb

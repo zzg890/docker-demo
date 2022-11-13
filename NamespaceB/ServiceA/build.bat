@@ -1,1 +1,1 @@
-docker build -f Dockerfile -t b_serviceb ..
+docker build -f Dockerfile -t b_servicea ..
