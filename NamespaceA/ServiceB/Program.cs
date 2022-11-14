@@ -6,7 +6,10 @@ namespace ServiceB
         {
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
-            app.MapGet("/", () => "Hello, This is a ServiceB from NamespaceA");
+            app.MapGet("/", async ctx =>
+            {
+                await ctx.Response.WriteAsync($"Hello, This is a ServiceB from NamespaceA.({ctx.Connection.LocalIpAddress})");
+            });
             app.Run();
         }
     }

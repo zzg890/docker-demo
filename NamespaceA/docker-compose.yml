@@ -1,8 +1,11 @@
-version: '3.0'
+version: '3.8'
 services:
   servicea:
     image: localhost:6000/a_servicea
+    # deploy:
+    #   replicas: 2
     ports:
       - 7000:80
   serviceb:
     image: localhost:6000/a_serviceb
+    

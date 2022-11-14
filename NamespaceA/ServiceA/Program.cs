@@ -7,8 +7,11 @@ namespace ServiceA
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
 
-            app.MapGet("/", () => "Hello, This is ServiceA from NamespaceA");
-
+          
+            app.MapGet("/", async ctx =>
+                     {
+                         await ctx.Response.WriteAsync($"Hello, This is ServiceA from NamespaceA.({ctx.Connection.LocalIpAddress})");
+                     });
             app.Run();
         }
     }
